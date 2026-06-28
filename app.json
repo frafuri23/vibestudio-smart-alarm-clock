@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "Smart Alarm Clock",
+    "slug": "smart-alarm-clock",
+    "version": "1.0.0",
+    "icon": "https://appspawn-gateway-production.up.railway.app/v1/assets/eceef0b9-b3c2-4ddf-bdd5-53ead9562e44/icon.png",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.francescofurioso.sveglia",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Hai bisogno della fotocamera per fotografare l'oggetto e disattivare la sveglia.",
+        "NSPhotoLibraryUsageDescription": "Accesso alle foto per la sfida sveglia.",
+        "UIBackgroundModes": [
+          "audio",
+          "fetch",
+          "remote-notification",
+          "background-processing",
+          "processing"
+        ],
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSMicrophoneUsageDescription": "This app uses the microphone to record audio."
+      },
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "com.francescofurioso.sveglia",
+      "permissions": [
+        "CAMERA",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "USE_FULL_SCREEN_INTENT",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ff6b35"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9dc2c085-70db-467d-8f4b-61aecf595043"
+      },
+      "vibestudio": {
+        "proxy": "https://appspawn-gateway-production.up.railway.app/v1/app-proxy/eceef0b9-b3c2-4ddf-bdd5-53ead9562e44",
+        "key": "5db991f2e8b7b41176c5f4d6735ba3907929abb4",
+        "provider": "anthropic"
+      }
+    },
+    "owner": "frafuri"
+  }
+}
